@@ -1,4 +1,5 @@
 var moment = require('moment');
+var tokens = require('./vars.js');
 moment().format();
 var date = moment().subtract(8,'hours');
 
@@ -7,7 +8,7 @@ const Discord = require('discord.js');
 const client = new Discord.Client();
 
 var cleverbot = require("cleverbot.io"),
-bot = new cleverbot("YOUR_API_USER", "YOUR_API_KEY");
+bot = new cleverbot(tokens.cleverName, tokens.cleverKey);
 bot.setNick("CaeoBot");
 
 // music(client, {
@@ -46,6 +47,7 @@ function determinesmithAwakened(author)
       }
       return false;
     }
+    // return true;
 }
 
 function printLine(lineArray, message)
@@ -261,11 +263,11 @@ client.on('message', message => {
   }
 });
 
-client.login('YOUR TOKEN');
+client.login(tokens.discordToken);
 
 var userString;
-var caeoID = 'CAEO_ID';
-var caeobotID = 'BOT_ID';
+var caeoID = tokens.caeoID;
+var caeobotID = tokens.caeobotID;
 
 var normalResponseKeywords = ['caeo','cae','mizugorou','kevin'];
 var angryResponseKeywords = ['herbicide','tea','fuck','die', 'nopal', 'cactus', 'succulent'];
