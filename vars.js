@@ -1,0 +1,5 @@
+exports.cleverName = 'CLEVERBOT_IO_NAME'
+exports.cleverKey = 'CLEVERBOT_IO_KEY'
+exports.discordToken = 'DISCORD_BOT_TOKEN'
+exports.caeoID = 'CAEO_DISCORD_ID'
+exports.caeobotID = 'CAEOBOT_DISCORD_ID'
